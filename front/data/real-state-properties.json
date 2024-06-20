@@ -1,0 +1,9 @@
+{
+    "data":[
+        {"property": "house", "location": true, "price":30000},
+        {"property": "apartment" , "location":true, "price":20000},
+        {"property": "parking", "location":true, "price":50000}
+
+    ]
+
+}
