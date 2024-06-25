@@ -2,7 +2,8 @@
 var holderProperties = document.getElementById("holder-properties");
 console.log(holderProperties);
 
-var endpoint = "http://localhost:5500/front/data/real-state-properties.json";
+//var endpoint = "http://localhost:5500/front/data/real-state-properties.json";
+var endpoint = "http://localhost/back-re/index.php";
 var xhr = new XMLHttpRequest();
 //console.log(xhr);
 
