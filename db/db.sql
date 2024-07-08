@@ -2,6 +2,7 @@ CREATE DATABASE realstate;
 USE realstate;
 
 create table properties(
+    id INT (11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     property VARCHAR(255) not null,
     location BOOLEAN not null,
     price int(11) not null
