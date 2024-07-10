@@ -1,10 +1,11 @@
 //este script es para obtener datos de un formulario en html 
 var form = document.getElementById("form");
 var inputs = document.getElementsByTagName("input");
-var inputProperty = inputs[0];
-var inputLocation = inputs[1];
-var inputPrice = inputs[2];
-var inputSubmit = inputs[3];
+var inputId = inputs [0];
+var inputProperty = inputs[1];
+var inputLocation = inputs[2];
+var inputPrice = inputs[3];
+var inputSubmit = inputs[4];
 
 console.log(form);
 
@@ -12,7 +13,8 @@ console.log(form);
 inputSubmit.addEventListener("click",sendData);
 function sendData (e){
   e.preventDefault();
-  console.log(inputProperty.value ,
+  console.log(inputId.value,
+    inputProperty.value,
     inputLocation.value,
     inputPrice.value
   );
@@ -21,7 +23,7 @@ function sendData (e){
 
 
 
-
+var id = 4;
 var property = "mini house";
 var local = true;
 var price = 2000;
@@ -32,14 +34,14 @@ var holderProperties = document.getElementById("holder-properties");
 console.log(holderProperties);
 
 
-var endpoint = "http://localhost/back-re/index-insert.php";
+var endpoint = "http://localhost/back-re/index-update.php";
 var xhr = new XMLHttpRequest();
 
 xhr.open("POST", endpoint, true);
 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
 //send es leer pero requiere capturar un evento
-//xhr.send("property=" + property + "&location=" + local + "&price=" + price);
+xhr.send(id +"id=" + "&property=" + property + "&location=" + local + "&price=" + price);
 //agregando un evento
 xhr.addEventListener("load", dataLoaded);
 
